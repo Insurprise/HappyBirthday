@@ -209,6 +209,17 @@
     </div>
 
     <script>
+        // 检查是否是10月10日
+        function isBirthday() {
+            const now = new Date();
+            return now.getMonth() === 9 && now.getDate() === 10; // 月份从0开始，9代表10月
+        }
+        
+        // 如果是生日，跳转到生日页面
+        if (isBirthday()) {
+            window.location.href = 'birthday.html';
+        }
+        
         // 创建浮动元素
         function createFloatingElements() {
             const container = document.getElementById('floatingElements');
@@ -249,21 +260,6 @@
             
             // 计算时间差
             const timeDiff = targetDate - now;
-            
-            // 如果是10月10日
-            if (now.getMonth() === 9 && now.getDate() === 10) {
-                document.getElementById('celebrationMessage').style.display = 'block';
-                document.querySelector('.countdown').style.display = 'none';
-                document.querySelector('.message').style.display = 'none';
-                document.querySelector('h1').textContent = '今天是10月10日！';
-                document.querySelector('.subtitle').textContent = '生日快乐！';
-                
-                // 3秒后跳转到生日页面
-                setTimeout(() => {
-                    window.location.href = 'index.html';
-                }, 3000);
-                return;
-            }
             
             // 计算天、小时、分钟和秒
             const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
