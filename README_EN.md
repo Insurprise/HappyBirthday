@@ -87,8 +87,6 @@ The overall implementation uses pure HTML, CSS and JavaScript, along with GSAP f
 
 Thanks to the original project author for open sourcing. This project is modified based on [happy-birthday](https://github.com/faahim/happy-birthday).
 
-If you like this project, you can give it a star ⭐ to encourage me, thank you!
-
 ## Changelog
 
 ### v2.0 (2025-02-03)
